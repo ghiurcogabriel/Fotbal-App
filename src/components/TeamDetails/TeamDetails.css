@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: calc(100% - 100px);
+    justify-content: center;
+    align-items: center;
+}
+.club{
+    width: 20%;
+    padding: 10px;
+}
+.stadium-img{
+    width: 60%;
+}
+.middle-contaiiner{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: auto;
+    width: 90%;
+}
+.club-details{
+    text-align: center;
+    font-size: bold;
+}
+.stadium{
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+}
+.club-details{
+    text-align: center;
+    font-size: bold;
+}

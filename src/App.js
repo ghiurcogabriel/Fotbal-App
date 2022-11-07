@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react";
 import './App.css';
+import { getTeamsInfo } from './components/Api/Api';
+import Navbar from "./components/Navbar/Navbar";
+import TeamDetails from "./components/TeamDetails/TeamDetails";
+
 
 function App() {
+
+const [teamInfo, setTeamInfo] = useState(null);
+
+
+useEffect(() => {
+  console.log(teamInfo); 
+  
+    getTeamsInfo()
+      .then((data) => {
+        console.log(data); 
+        if(data.response[0]){
+          setTeamInfo(data.response[0]);
+        }
+      })
+}, []);
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      {teamInfo ? <TeamDetails team={teamInfo}/> : <h1>Loading...</h1>}
     </div>
   );
 }
