@@ -9,12 +9,11 @@ export const getTeamsInfo = async (teamName) => {
             `https://api-football-v1.p.rapidapi.com/v3/teams`,
             {
                 params: {
-                    id: 529,
                     name: teamName,
                 },
                 headers: {
-                  'X-RapidAPI-Key': 'ec08c63f78msheb589bbe32d52d3p16a396jsn0b9522db490d',
-                  'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+                  'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
+                  'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
                 }  
             }
         )

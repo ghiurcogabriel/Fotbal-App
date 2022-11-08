@@ -1,3 +1,8 @@
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .container{
     display: flex;
     width: 100%;
@@ -32,4 +37,9 @@
 .club-details{
     text-align: center;
     font-size: bold;
+}
+.search-input{
+    width: 80%;
+    height: 50px;
+    margin: 20px;
 }
