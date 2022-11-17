@@ -41,6 +41,15 @@ const TeamDetails = (data) => {
               <h2>Surface: {data.team.venue.surface}</h2>
             </div>
           </div>
+          <div className="stadium">
+            <div className="stadium-details">
+              <h2>Name: {data.team.venue.name}</h2>
+              <h2>City: {data.team.venue.city}</h2>
+              <h2>Address: {data.team.venue.address}</h2>
+              <h2>Capacity: {data.team.venue.capacity}</h2>
+              <h2>Surface: {data.team.venue.surface}</h2>
+            </div>
+          </div>
         </div>
       </div>
     </>
