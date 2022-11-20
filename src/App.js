@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
+// import {
+//   BrowserRouter as Router,
+//   Route
+// } from "react-router-dom";
+// import { Link } from 'react-router-dom';
 import './App.css';
 import { getTeamsInfo } from './components/Api/Api';
 import Navbar from "./components/Navbar/Navbar";
 import TeamDetails from "./components/TeamDetails/TeamDetails";
 import Search from "./components/Search/Search";
+// import TeamsHomePage from "./components/TeamsHomePage/TeamsHomePage";
 
 
 function App() {
 
   const [teamName, setTeamName] = useState(null);
-const [teamInfo, setTeamInfo] = useState(null);
+  const [teamInfo, setTeamInfo] = useState(null);
 
 
 useEffect(() => {
@@ -29,9 +35,9 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar  />
       <Search setTeamName={setTeamName}/>
-      {teamInfo ? <TeamDetails team={teamInfo}/> : <h1>Loading...</h1>}
+      {teamInfo ? <TeamDetails team={teamInfo}/> : <h1>Search your favorite football team!</h1>}
     </div>
   );
 }

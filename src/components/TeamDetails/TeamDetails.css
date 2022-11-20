@@ -16,14 +16,15 @@
 }
 .stadium-img{
     width: 60%;
+    height: 600px;
 }
 .middle-contaiiner{
     display: flex;
-    justify-content: center;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     height: auto;
-    width: 90%;
+    width: 100%;
 }
 .club-details{
     text-align: center;
