@@ -21,7 +21,7 @@ function App() {
   }, [teamName]);
 
   return (
-    <div className="App">
+    <>
       <Navbar />
       <Search setTeamName={setTeamName} />
       {teamInfo ? (
@@ -29,7 +29,7 @@ function App() {
       ) : (
         <h1>Search your favorite football team!</h1>
       )}
-    </div>
+    </>
   );
 }
 
