@@ -1,34 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-import { getTeamsInfo } from "./components/Api/Api";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import TeamDetails from "./components/TeamDetails/TeamDetails";
-import Search from "./components/Search/Search";
+import MainApp from "./components/MainApp/MainApp";
+import TeamsHomePage from "./components/TeamsHomePage/TeamsHomePage";
+
+
 
 function App() {
-  const [teamName, setTeamName] = useState(null);
-  const [teamInfo, setTeamInfo] = useState(null);
-
-  useEffect(() => {
-    console.log(teamName);
-
-    getTeamsInfo(teamName).then((data) => {
-      console.log(data);
-      if (data.response[0]) {
-        setTeamInfo(data.response[0]);
-      }
-    });
-  }, [teamName]);
-
   return (
     <>
       <Navbar />
-      <Search setTeamName={setTeamName} />
-      {teamInfo ? (
-        <TeamDetails team={teamInfo} />
-      ) : (
-        <h1>Search your favorite football team!</h1>
-      )}
+      <Routes>
+        <Route path='/' element={<MainApp />} />
+      </Routes>
+      <Routes>
+        <Route path="/TeamsHomePage" element={<TeamsHomePage />} />
+      </Routes>
+      
     </>
   );
 }
