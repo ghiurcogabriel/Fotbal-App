@@ -12,7 +12,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<MainApp />} />
+        <Route exact path='/' element={<MainApp />} />
       </Routes>
       <Routes>
         <Route path="/TeamsHomePage" element={<TeamsHomePage />} />

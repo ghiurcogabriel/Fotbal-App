@@ -1,35 +1,72 @@
 import React from "react";
 // import { Link } from 'react-router-dom';
 // import { BrowserRouter as Router, Route } from "react-router-dom";
+import logo from "../../images/logo.png";
 import "./TeamsHomePage.css";
 import Barca from "./Teams/Barca";
-import RealMadrid from "./Teams/RealMadrid";
+// import RealMadrid from "./Teams/RealMadrid";
+import club from "./Teams/clubTeams";
 
-const TeamsHomePage = (data) => {
+console.log(club[0].name);
+
+const TeamsHomePage = () => {
+  const { name, country, city } = club;
+  console.log(name);
   return (
-    <>
-      <div className="container">
-        <div className="team-container">
-          <img className="logo" src="barca" alt="Barcelona" />
-          <h1>Barcelona</h1>
-          <div className="club-details">
-            <h2>
-              Club Name: <br />
-              {data.team.team.name}
-            </h2>
-            <h2>
-              Country: <br />
-              {data.team.team.country}
-            </h2>
-            <h2>
-              Founded: <br /> {data.team.team.founded}
-            </h2>
+    <div id="teams">
+      <div className="teams-main-cotainer">
+        <div className="teams-container">
+          <div className="teams-details">
+            <div className="teams-header">
+              <img className="logo" src={logo} alt="Barcelona" />
+              <h1>Barcelona</h1>
+            </div>
+            <div className="teams-content">
+              <div className="teams-content-1">
+                <p>Country: Spain</p>
+                <p>Founded: 1899</p>
+                <p>Stadium: Sporify Camp Nou</p>
+              </div>
+              <div className="teams-content-2">
+                <p>City: Barcelona</p>
+                <p>President: Juan Laporta</p>
+              </div>
+            </div>
+            <div>
+              <button className="see-more">See More Details</button>
+            </div>
+            <div className="club-details"></div>
           </div>
         </div>
+        <div className="teams-container">
+          <div className="teams-details">
+            <div className="teams-header">
+              <img className="logo" src={logo} alt="Barcelona" />
+              <h1>Barcelona</h1>
+            </div>
+            <div className="teams-content">
+              <div className="teams-content-1">
+                <p>Country: Spain</p>
+                <p>Founded: 1899</p>
+                <p>Stadium: Sporify Camp Nou</p>
+              </div>
+              <div className="teams-content-2">
+                <p>City: Barcelona</p>
+                <p>President: Juan Laporta</p>
+              </div>
+            </div>
+            <div>
+              <button className="see-more">See More Details</button>
+            </div>
+            <div className="club-details"></div>
+          </div>
+        </div>
+        <div>
+          <Barca />
+        </div>
       </div>
-      <Barca />
-      <RealMadrid />
-    </>
+      {/* <RealMadrid /> */}
+    </div>
   );
 };
 
