@@ -4,6 +4,7 @@ img {
 h1 {
   margin: 0;
   font-size: 20px;
+  text-align: center;
 }
 #teams {
   margin: 0;
@@ -18,60 +19,5 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 1200px;
-}
-.teams-container {
-  display: flex;
-  position: relative;
-  min-width: 320px;
-  height: 440px;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  margin: 30px;
-  transition: 0.5s;
-  background: #2a2b2f;
-}
-.teams-details {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  background: #2a2b2f;
-  border-radius: 15px;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.teams-details:hover {
-  transform: translateY(-20px);
-}
-
-.teams-content {
-  display: flex;
-}
-.teams-header {
-  text-align: center;
-}
-.see-more {
-  display: block;
-  margin: auto;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.5s max-width ease;
-  background-color: #a00000;
-  max-width: 39%;
-  border-radius: 50px 50px 50px 50px;
-  cursor: pointer;
-}
-.see-more:hover {
-  color: #000;
-  max-width: 49%;
+  max-width: 100%;
 }
