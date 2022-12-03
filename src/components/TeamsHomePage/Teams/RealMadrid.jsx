@@ -1,16 +1,16 @@
 import React from "react";
 import club from "./clubTeams";
+import "./Teams.css";
 
 const RealMadrid = () => {
   const teams = club;
-  console.log(teams);
 
   return (
     <>
       {club?.map((team, i) => {
         return (
-          <div index={i} className="teams-container">
-            <div className="teams-details">
+          <div className="teams-container">
+            <div index={i} className="teams-details">
               <div className="teams-header">
                 <img className="logo" src={team.logo} alt="Barcelona" />
                 <h1>{team.name}</h1>

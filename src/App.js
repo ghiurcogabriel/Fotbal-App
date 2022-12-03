@@ -17,7 +17,6 @@ function App() {
       <Routes>
         <Route path="/TeamsHomePage" element={<TeamsHomePage />} />
       </Routes>
-      
     </>
   );
 }
